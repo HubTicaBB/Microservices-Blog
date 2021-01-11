@@ -2,7 +2,7 @@
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    const baseUrl = 'http://localhost:82/api/Users?';
+    const baseUrl = 'http://localhost:6002/api/Users?';
     const queryString = `username=${username}&password=${password}`;
     const endpoint = baseUrl + queryString;
 

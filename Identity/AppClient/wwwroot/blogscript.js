@@ -1,7 +1,7 @@
 ﻿const addButton = document.getElementById('add-new-blogpost-button');
 addButton.style.display = window.localStorage.getItem('userStatus') === '1' ? 'block' : 'none';
 
-const endpoint = 'http://localhost:6000/api/Blogposts';
+const endpoint = 'http://localhost:6001/api/Blogposts';
 
 function getBlogPosts() {
     fetch(endpoint)
