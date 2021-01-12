@@ -3,6 +3,19 @@
 
 ### Laboration 4: Skapa arkitektur
 
+#### Motivation
+
+Vi skapade en blogg där man kan logga in som vanlig användare eller administratör. Alla som är inloggade kan läsa blogginlägg, men bara admin kan skriva nya blogginlägg som sparas i databasen. 
+
+Vi valde att bygga 3 mikrotjänster i ASP.NET Core med EF Core: en frontend-del med statiska filer (AppClient), ett Rest-API med SQL-databas för användare (Identity) och ett till Rest-API med egen SQL-databas för bloggen (Blog). 
+
+
+Vi valde att separera projektet i 3 delar så att man kan lätt använda de separat i andra projekt om det skulle behövas, på det sättet får man flexibilitet och mer skalbarhet. API-erna handlar om två olika resurser (användare för login och blogginlägg för själva bloggen).
+Vi byggde projektet med Docker-compose och där har vi 5 containers:
+* 1 container för frontend-delen (appclient) som beror på de 2 API-erna 
+* 2 enskilda containers för API-er (identity och blog) som beror på respektive databaser
+* 2 enskilda containers för SQL-databaserna (identitydb och blogdb)
+
 #### Introduktion och syfte
 Målet är att skapa en modern arkitektur för en applikation
 
