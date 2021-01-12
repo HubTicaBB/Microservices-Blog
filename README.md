@@ -16,6 +16,12 @@ Vi byggde projektet med Docker-compose och där har vi 5 containers:
 * 2 enskilda containers för API-er (identity och blog) som beror på respektive databaser
 * 2 enskilda containers för SQL-databaserna (identitydb och blogdb)
 
+#### Instruktioner
+Man ska köra projektet med Docker-compose.
+Login:
+* som användare: Username:User, Password:User
+* som admin: Username:Admin, Password:Admin
+
 #### Introduktion och syfte
 Målet är att skapa en modern arkitektur för en applikation
 
